@@ -15,12 +15,12 @@ def get_access_token(get_new_token: bool=False):
         res = requests.post(URL, headers=headers, data=json.dumps(body))
         ACCESS_TOKEN = res.json()["access_token"]
 
-        f_access_token = open("/workspaces/codespaces-blank/project/stock/national/yj/data/access_token.txt", "w")
+        f_access_token = open("/workspaces/10eace_codespace/project/stock/national/yj/data/access_token.txt", "w")
         f_access_token.write("")
         f_access_token.write(ACCESS_TOKEN)
         f_access_token.close()
     else:
-        f_access_token = open("/workspaces/codespaces-blank/project/stock/national/yj/data/access_token.txt", "r")
+        f_access_token = open("/workspaces/10eace_codespace/project/stock/national/yj/data/access_token.txt", "r")
         ACCESS_TOKEN = f_access_token.readline()
         f_access_token.close()
 
@@ -29,7 +29,7 @@ def get_access_token(get_new_token: bool=False):
 def open_config_file(get_new_token: bool=False):
     config_path_cs = '/home/coder/project/project/stock/config.yaml'
     config_path_lo = '/home/ubuntu/code-server/project/stock/config.yaml'
-    config_path_gcs = '/workspaces/codespaces-blank/project/stock/config.yaml'
+    config_path_gcs = '/workspaces/10eace_codespace/project/stock/config.yaml'
 
     with open(config_path_gcs, encoding='UTF-8') as f:
         _cfg = yaml.load(f, Loader=yaml.FullLoader)
