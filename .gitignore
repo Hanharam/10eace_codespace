@@ -1,12 +1,12 @@
 # no .a files
 #*.a
-*.pyc
+/workspace/**/*.pyc
 
-trading_gpt.ipynb
+project/stock/national/yj/build/trading_gpt.ipynb
 
-*.txt
+/workspace/**/*.txt
 
-*.md
+/workspace/**/*.md
 
 # but do track lib.a, even though you're ignoring .a files above
 #!lib.a
